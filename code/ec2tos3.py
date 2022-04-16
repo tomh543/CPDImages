@@ -8,14 +8,14 @@ s3 = boto3.resource('s3')
 s3.meta.client.upload_file('CPDImages/images/image1.jpg', 'coursework-bucket-s1311448', 'image1.jpg')
 time.sleep(30),
 s3 = boto3.resource('s3')
-s3.meta.client.upload_file('CPDImages/images/image1.jpg', 'coursework-bucket-s1311448', 'image2.png')
+s3.meta.client.upload_file('CPDImages/images/image2.png', 'coursework-bucket-s1311448', 'image2.png')
 time.sleep(30),
 s3 = boto3.resource('s3')
-s3.meta.client.upload_file('CPDImages/images/image1.jpg', 'coursework-bucket-s1311448', 'image3.jpg')
+s3.meta.client.upload_file('CPDImages/images/image3.jpg', 'coursework-bucket-s1311448', 'image3.jpg')
 time.sleep(30),
 s3 = boto3.resource('s3')
-s3.meta.client.upload_file('CPDImages/images/image1.jpg', 'coursework-bucket-s1311448', 'image4.jpg')
+s3.meta.client.upload_file('CPDImages/images/image4.jpg', 'coursework-bucket-s1311448', 'image4.jpg')
 time.sleep(30),
 s3 = boto3.resource('s3')
-s3.meta.client.upload_file('CPDImages/images/image1.jpg', 'coursework-bucket-s1311448', 'image5.jpg')
+s3.meta.client.upload_file('CPDImages/images/image5.jpg', 'coursework-bucket-s1311448', 'image5.jpg')
 time.sleep(30)
