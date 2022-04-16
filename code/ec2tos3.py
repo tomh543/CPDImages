@@ -1,0 +1,11 @@
+import boto3
+cli = boto3.client('s3')
+cli.put_object(Bucket='coursework-bucket-s1311448', Key='/CPDimages/images/image1.jpg')
+cli = boto3.client('s3')
+cli.put_object(Bucket='coursework-bucket-s1311448', Key='/CPDimages/images/image2.jpg')
+cli = boto3.client('s3')
+cli.put_object(Bucket='coursework-bucket-s1311448', Key='/CPDimages/images/image3.jpg')
+cli = boto3.client('s3')
+cli.put_object(Bucket='coursework-bucket-s1311448', Key='/CPDimages/images/image4.jpg')
+cli = boto3.client('s3')
+cli.put_object(Bucket='coursework-bucket-s1311448', Key='/CPDimages/images/image5.jpg')
