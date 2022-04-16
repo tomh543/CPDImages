@@ -6,3 +6,16 @@ import time
 #use time.sleep(30) function in order to put a 30second delay between file uploads.
 s3 = boto3.resource('s3')
 s3.meta.client.upload_file('CPDImages/images/image1.jpg', 'coursework-bucket-s1311448', 'image1.jpg')
+time.sleep(30),
+s3 = boto3.resource('s3')
+s3.meta.client.upload_file('CPDImages/images/image1.jpg', 'coursework-bucket-s1311448', 'image2.png')
+time.sleep(30),
+s3 = boto3.resource('s3')
+s3.meta.client.upload_file('CPDImages/images/image1.jpg', 'coursework-bucket-s1311448', 'image3.jpg')
+time.sleep(30),
+s3 = boto3.resource('s3')
+s3.meta.client.upload_file('CPDImages/images/image1.jpg', 'coursework-bucket-s1311448', 'image4.jpg')
+time.sleep(30),
+s3 = boto3.resource('s3')
+s3.meta.client.upload_file('CPDImages/images/image1.jpg', 'coursework-bucket-s1311448', 'image5.jpg')
+time.sleep(30)
