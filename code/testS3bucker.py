@@ -1,11 +1,11 @@
-    #import of boto3 in order to run the python code
-    import boto3
-    #import of logging & ClientError in order to allow for error testing
-    import logging
-    from botocore.exceptions import ClientError
-    # function to create bucket
-    def create_bucket(bucket_name, region=None):
-    #creating the bucket if bucket created it will return True else false, if region is not specified it will default to us-east-1
+#import of boto3 in order to run the python code    
+import boto3
+#import of logging & ClientError in order to allow for error testing
+import logging
+from botocore.exceptions import ClientError
+# function to create bucket
+def create_bucket(bucket_name, region=None):
+#creating the bucket if bucket created it will return True else false, if region is not specified it will default to us-east-1
     try:
         if region is None:
             s3_client = boto3.client('s3')
@@ -19,7 +19,7 @@
         logging.error(e)
         return False
     return True
-    
     #running the function to create the bucket
     #creates bucket called testbettercode
     create_bucket("testbettercode", "us-east-1")
+    
