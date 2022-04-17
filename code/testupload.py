@@ -25,7 +25,7 @@ for filename in png_files:
     
 for filename in txt_files:
     key = "%s/%s" % (FOLDER_NAME, os.path.basename(filename))
-    print("Error file %s/%s not supported" % (filename,key))
+    print("Error file not supported" % "%s/%s"  % (filename,key))
     
 #Print Upload complete and inform users only two file types supported.
 #For future updates adding a new for function(s) for filetype_files would be added
