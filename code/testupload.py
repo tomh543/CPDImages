@@ -21,5 +21,5 @@ for filename in png_files:
     print("Putting %s as %s" % (filename,key))
     s3.meta.client.upload_file(filename, BUCKET_NAME, key)
     time.sleep(30)
-
-print("All_Done")
+          
+print("Upload Complete, Please note only .jpg and .png files are supported any others will not be uploaded")
