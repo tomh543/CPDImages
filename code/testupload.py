@@ -22,10 +22,14 @@ for filename in png_files:
     print("Putting %s as %s" % (filename,key))
     s3.meta.client.upload_file(filename, BUCKET_NAME, key)
     time.sleep(30)
-    else
-    print ("Error only jpg & png files are supported, file wont be uploaded")
-
     
+    
+if (filename != jpg_files or filename != png_files:
+    print ("File not in correct format png & jpg only" + (FOLDER_NAME, os.path.basename(filename)))
+    )
+    
+    
+# Possibly e
 #Print Upload complete and inform users only two file types supported.
 #For future updates adding a new for function(s) for filetype_files would be added
 print("Upload Complete, Please note only .jpg and .png files are supported any othell not be uploaded")
