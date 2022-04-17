@@ -5,9 +5,7 @@ import os
 BUCKET_NAME = 'coursework-bucket-s1311448'
 FOLDER_NAME = 'CPDImages/images/'
 
-session = boto3.Session(profile_name='default')
-s3 = session.client('s3')
-
+s3 = boto3.resource('s3')
 jpg_files = glob.glob("CPDImages/images/*.jpg")
 png_files = glob.glob("CPDImages/images/*.jpg.png")
 
