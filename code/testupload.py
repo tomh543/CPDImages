@@ -9,6 +9,7 @@ FOLDER_NAME = 'CPDImages/images/'
 s3 = boto3.resource('s3')
 jpg_files = glob.glob("CPDImages/images/*.jpg")
 png_files = glob.glob("CPDImages/images/*.png")
+txt_files = glob.glob("CPDImages/images/*.txt")
 
 for filename in jpg_files:
     key = "%s/%s" % (FOLDER_NAME, os.path.basename(filename))
