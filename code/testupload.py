@@ -24,9 +24,9 @@ for filename in png_files:
     time.sleep(30)
     
     
-if (filename != jpg_files or filename != png_files:
+if filename != jpg_files or filename != png_files:
     print ("File not in correct format png & jpg only" + (FOLDER_NAME, os.path.basename(filename)))
-    )
+    
     
     
 # Possibly e
