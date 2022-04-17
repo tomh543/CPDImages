@@ -9,7 +9,7 @@ FOLDER_NAME = 'CPDImages/images/'
 s3 = boto3.resource('s3')
 jpg_files = glob.glob("CPDImages/images/*.jpg")
 png_files = glob.glob("CPDImages/images/*.png")
-txt_files = glob.glob("CPDImages/images/*.txt")
+#for future updates addition of new file formats would be done by adding e.g. gif_files = glob.glob(""CPDImages/images/*.")
 
 for filename in jpg_files:
     key = "%s/%s" % (FOLDER_NAME, os.path.basename(filename))
@@ -18,12 +18,12 @@ for filename in jpg_files:
     time.sleep(30)
 
 for filename in png_files:
+    if
     key = "%s/%s" % (FOLDER_NAME, os.path.basename(filename))
     print("Putting %s as %s" % (filename,key))
     s3.meta.client.upload_file(filename, BUCKET_NAME, key)
     time.sleep(30)
-    
-for filename not in jpg_files or png_files:
+    else
     print ("Error only jpg & png files are supported, file wont be uploaded")
 
     
