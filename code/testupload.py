@@ -1,5 +1,6 @@
 import glob
 import boto3
+import os
 import time
 
 BUCKET_NAME = 'coursework-bucket-s1311448'
