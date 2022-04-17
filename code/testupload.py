@@ -18,7 +18,7 @@ for filename in jpg_files:
     time.sleep(30)
 
 for filename in png_files:
-    if key = "%s/%s" % (FOLDER_NAME, os.path.basename(filename))
+    key = "%s/%s" % (FOLDER_NAME, os.path.basename(filename))
     print("Putting %s as %s" % (filename,key))
     s3.meta.client.upload_file(filename, BUCKET_NAME, key)
     time.sleep(30)
