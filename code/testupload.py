@@ -25,7 +25,7 @@ for filename in png_files:
     
     
 if filename != jpg_files or filename != png_files:
-    print ("File not in correct format png & jpg only" + (FOLDER_NAME, os.path.basename(filename)))
+    print ("File not in correct format png & jpg only")
     
     
     
