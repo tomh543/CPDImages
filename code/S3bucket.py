@@ -6,7 +6,8 @@ from botocore.exceptions import ClientError
 
 # function to create bucket
 def create_bucket(bucket_name, region=None):
-#creating the bucket if bucket created it will return True else false, if region is not specified it will default to us-east-1
+#creating the bucket if bucket created it will return True else false, 
+#if region is not specified it will default to us-east-1
 
     
     try:
@@ -22,4 +23,5 @@ def create_bucket(bucket_name, region=None):
         logging.error(e)
         return False
     return True
-create_bucket("courseworks-bucket-s1311448")
+#runs create_bucket function for creating "coursework-bucket-s1311448" bucket in region us-east-1
+create_bucket("coursework-bucket-s1311448")

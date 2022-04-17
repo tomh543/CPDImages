@@ -1,21 +1,38 @@
-#importing boto3 for code
+#import glob for searching file types
+#import os for filepaths
+#import time to set delays
+#import boto3 to run python
+import glob
 import boto3
-#import time for delay
+import os
 import time
-#using put object function to upload images to Bucket coursework-bucket-s1311448
-#use time.sleep(30) function in order to put a 30second delay between file uploads.
+
+BUCKET_NAME = 'coursework-bucket-s1311448'
+FOLDER_NAME = 'CPDImages/images/'
+
 s3 = boto3.resource('s3')
-s3.meta.client.upload_file('CPDImages/images/image1.jpg', 'coursework-bucket-s1311448', 'image1.jpg')
-time.sleep(30),
-s3 = boto3.resource('s3')
-s3.meta.client.upload_file('CPDImages/images/image2.png', 'coursework-bucket-s1311448', 'image2.png')
-time.sleep(30),
-s3 = boto3.resource('s3')
-s3.meta.client.upload_file('CPDImages/images/image3.jpg', 'coursework-bucket-s1311448', 'image3.jpg')
-time.sleep(30),
-s3 = boto3.resource('s3')
-s3.meta.client.upload_file('CPDImages/images/image4.jpg', 'coursework-bucket-s1311448', 'image4.jpg')
-time.sleep(30),
-s3 = boto3.resource('s3')
-s3.meta.client.upload_file('CPDImages/images/image5.jpg', 'coursework-bucket-s1311448', 'image5.jpg')
-time.sleep(30)
+jpg_files = glob.glob("CPDImages/images/*.jpg")
+png_files = glob.glob("CPDImages/images/*.png")
+#for future updates addition of new file formats would be done by adding e.g. gif_files = glob.glob(""CPDImages/images/*.")
+
+#checks for jpg files and uploads with a timer delay of 30 seconds between each upload
+for filename in jpg_files:
+    key = "%s/%s" % (FOLDER_NAME, os.path.basename(filename))
+    print("Putting %s as %s" % (filename,key))
+    s3.meta.client.upload_file(filename, BUCKET_NAME, key)
+    time.sleep(30)
+    
+#checks for png files and uploads with a timer delay of 30 seconds between each upload
+for filename in png_files:
+    key = "%s/%s" % (FOLDER_NAME, os.path.basename(filename))
+    print("Putting %s as %s" % (filename,key))
+    s3.meta.client.upload_file(filename, BUCKET_NAME, key)
+    time.sleep(30)
+#For future updates adding a new for function(s) for filetype_files would be added 
+#Check to see if any files are not jpg or png. If file exists notify user.  
+if filename != jpg_files or filename != png_files:
+    print ("File not in correct format png & jpg only")
+    
+    
+#Print Upload complete and inform users only two file types supported.
+print("Upload Complete, Please note only .jpg and .png files are supported any othell not be uploaded")
